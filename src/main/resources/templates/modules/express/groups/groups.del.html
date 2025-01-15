@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="~{index/head.html::indexHead}"></th:block>
+</head>
+<body>
+<div class="form-block">
+    <div class="form-block-inner">
+        <form method="post" th:object="${addGroup}">
+            <h1 class="center" th:text="${title}"></h1>
+            <div class="table tableVertical">
+                <div class="tableTR">
+                    <div class="tableTD0 center">
+                        <h2>Вы уверены, что хотите удалить группу и все ее содержимое?</h2>
+                        <div class="margin50">
+                           <span class="inline-title">
+                                <img src="/modules/express/img/directory.svg" height="25" alt="dir" class="absmiddle" />
+                                <span th:text="${group.title}"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tableTR">
+                    <div class="tableTD0 center">
+                        <a class="submit" th:href="@{'/express/' + ${rootGroup.getIdGroup()}}">Отмена</a>
+                        <input type="submit" value="Удалить" class="remove-button" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

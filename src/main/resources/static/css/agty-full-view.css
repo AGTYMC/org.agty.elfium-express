@@ -1,0 +1,50 @@
+.agty-full-view {
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    z-index: 9999990;
+    align-items: center;
+    justify-content: center;
+}
+
+.agty-full-view-nodisplay {
+    display: none;
+}
+
+.agty-full-view {
+    .agty-full-view-block {
+        display: flex;
+        z-index: 9999991;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .agty-fullview-close-button {
+        position: absolute;
+        z-index: 9999992;
+        top: 10px;
+        right: 10px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        color: #0AEEFF;
+        font-size: 21px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        cursor: pointer;
+        text-align: center;
+        border: 1px #2b2b2b solid;
+    }
+
+    .agty-fullview-close-button:hover {
+        background-color: rgba(22, 22, 22, 1);
+        color: #ff0;
+    }
+}

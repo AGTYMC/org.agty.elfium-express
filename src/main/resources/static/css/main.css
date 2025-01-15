@@ -1,0 +1,445 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.red {
+    color: #ff0000;
+}
+
+.green {
+    color: #009900;
+}
+
+.blue {
+    color: #0000ff;
+}
+
+.blueLight {
+    color: #0AEEFF;
+}
+
+.orange {
+    color: #FF8040;
+}
+
+.white {
+    color: #fff;
+}
+
+.death {
+    color: #8000FF;
+    font-weight: bold;
+}
+
+.grey {
+    color: #555;
+}
+
+.clear {
+    clear: both;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.help {
+    font-size: 80%;
+    font-family: Verdana, sans-serif;
+}
+
+.bigFontSize {
+    font-size: 130%;
+}
+
+.border_red {
+    border: 1px #f00 solid;
+}
+
+.control {
+    float: right;
+}
+
+.control_left {
+    float: left;
+}
+
+.nodisplay {
+    display: none;
+}
+
+.ui-autocomplete {
+    font-size: 10px;
+}
+
+.lineheight100 {
+    line-height: 100%;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.center {
+    text-align: center;
+}
+
+img {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+.table {
+    display: table;
+    width: 100%;
+}
+
+.table0 {
+    display: table;
+}
+
+.tableTR {
+    display: table-row;
+}
+
+.tableTD {
+    display: table-cell;
+    padding: 5px;
+    vertical-align: top;
+    width: 98.5%;
+}
+
+.tableTD0 {
+    display: table-cell;
+    padding: 5px;
+    vertical-align: top;
+}
+
+.tableBorder .tableTD,
+.tableBorder .tableTD0 {
+    border: 1px solid #efefef;
+}
+
+.tableTD5 {
+    width: 3.5%;
+}
+
+.tableTD10 {
+    width: 8.5%;
+}
+
+.tableTD20 {
+    width: 18.5%;
+}
+
+.tableTD25 {
+    width: 23.5%;
+}
+
+.tableTD33 {
+    width: 32%;
+}
+
+.tableTD50 {
+    width: 48.5%;
+}
+
+.tableTD75 {
+    width: 73.5%;
+}
+
+.table99 {
+    width: 98%;
+}
+
+.tableA {
+    width: auto;
+}
+
+.tableTDwidth10 {
+    width: 10px;
+}
+
+.tableTDwidth15 {
+    width: 15px;
+}
+
+.tableTDwidth20 {
+    width: 20px;
+}
+
+.tableTDwidth25 {
+    width: 25px;
+}
+
+.tableTDwidth30 {
+    width: 30px;
+}
+
+.tableTDwidth35 {
+    width: 35px;
+}
+
+.tableTDwidth40 {
+    width: 40px;
+}
+
+.tableTDwidth50 {
+    width: 50px;
+}
+
+.tableTDwidth60 {
+    width: 60px;
+}
+
+.tableTDwidth80 {
+    width: 80px;
+}
+
+.tableTDwidth80 {
+    width: 80px;
+}
+
+.tableTDwidth90 {
+    width: 90px;
+}
+
+.tableTDwidth100 {
+    width: 100px;
+}
+
+.tableTDwidth110 {
+    width: 110px;
+}
+
+.tableTDwidth120 {
+    width: 110px;
+}
+
+.tableTDwidth130 {
+    width: 130px;
+}
+
+.tableTDwidth140 {
+    width: 140px;
+}
+
+.tableTDwidth150 {
+    width: 150px;
+}
+
+.tableTDwidth200 {
+    width: 200px;
+}
+
+.tableTDwidth250 {
+    width: 200px;
+}
+
+.tableTDwidth300 {
+    width: 300px;
+}
+
+.tableTDwidth350 {
+    width: 350px;
+}
+
+.tableTDwidth400 {
+    width: 400px;
+}
+
+.tableTDwidth500 {
+    width: 500px;
+}
+
+.tableVertical .tableTD,
+.tableVertical .tableTD0 {
+    vertical-align: middle;
+}
+
+.bg_gray,
+tr.bg_gray,
+td.bg_gray {
+    background : #d0d0d0;
+}
+
+.bg_white,
+tr.bg_white,
+td.bg_white {
+    background : #ffffff;
+}
+
+.bg_red,
+tr.bg_red,
+td.bg_red {
+    background : #ffa7a3;
+}
+
+tr.title, .title {
+    text-align: center;
+    color: #fff;
+    background: #333333;
+}
+
+div.title {
+    margin: 3px 0 3px 0;
+}
+
+.marginLeft10 {
+    margin-left: 10px;
+}
+
+.marginLeft20 {
+    margin-left: 20px;
+}
+
+.marginLeft30 {
+    margin-left: 30px;
+}
+
+.marginLeft40 {
+    margin-left: 40px;
+}
+
+.marginLeft50 {
+    margin-left: 50px;
+}
+
+.margin1 {
+    margin: 1px;
+}
+
+.margin2 {
+    margin: 2px;
+}
+
+.margin3 {
+    margin: 3px;
+}
+
+.margin5 {
+    margin: 5px;
+}
+
+.margin10 {
+    margin: 10px;
+}
+
+.margin15 {
+    margin: 15px;
+}
+
+.margin20 {
+    margin: 20px;
+}
+
+.margin25 {
+    margin: 25px;
+}
+
+.margin30 {
+    margin: 30px;
+}
+
+.margin40 {
+    margin: 40px;
+}
+
+.margin50 {
+    margin: 50px;
+}
+
+/**
+<div class="datepicker-container">
+  <div class="datepicker-center">
+    <div class="datepicker"></div>
+  </div>
+</div>
+ */
+.datepicker-container {
+    text-align: center;
+}
+
+.datepicker-center {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+/**
+    Страницы (перечисление, нумерация)
+ */
+.pagesList {
+    text-align: center;
+    padding: 10px;
+}
+.pagesList a,
+.pagesList a:link,
+.pagesList a:hover,
+.pagesList a:visited {
+    display: inline-block;
+    margin: 2px;
+    padding: 2px 4px 3px 4px;
+    border: 1px #efefef solid;
+    text-decoration: none;
+}
+.pagesList a:hover {
+    border: 1px #000 solid;
+    background: #efefef;
+}
+
+.pagesList a.pageActive,
+.pagesList a.pageActive:link,
+.pagesList a.pageActive:hover,
+.pagesList a.pageActive:visited {
+    text-decoration: none;
+    color: #f00;
+    border: 1px #efbaba solid;
+}
+
+.mh50 {
+    max-height: 50px;
+    overflow: auto;
+}
+
+.mh100 {
+    max-height: 100px;
+    overflow: auto;
+}
+
+.mh150 {
+    max-height: 150px;
+    overflow: auto;
+}
+
+.mh200 {
+    max-height: 200px;
+    overflow: auto;
+}
+
+.mh250 {
+    max-height: 250px;
+    overflow: auto;
+}
+
+.mh300 {
+    max-height: 300px;
+    overflow: auto;
+}
+
+.disabled {
+    color: #7d7d7d;
+    font-style: italic;
+}

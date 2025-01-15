@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="~{index/head.html::indexHead}"></th:block>
+</head>
+<body>
+<div class="form-block">
+    <div class="form-block-inner">
+        <form method="post" th:object="${addExpress}">
+            <h1 class="center" th:text="${title}"></h1>
+            <div class="table tableVertical">
+                <div class="tableTR">
+                    <div class="tableTD0 center">
+                        <h2>Вы уверены, что хотите удалить панель?</h2>
+                        <div class="margin50">
+                           <span class="inline-title">
+                                <img th:src="@{'/modules/express/img/' + ${panel.getIcon()}}" height="25" alt="panel" class="absmiddle" />
+                                <span th:text="${panel.getTitle()}"></span>
+                           </span>
+                            <br />
+                           <div th:if="${panel.getUri()} != null OR ${panel.getAbout()} != null" class="inline-about">
+                                <div th:if="${panel.getUri()} != null" th:text="${panel.getUri()}"></div>
+                                <div th:if="${panel.getAbout()} != null" th:text="${panel.getAbout()}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tableTR">
+                    <div class="tableTD0 center">
+                        <a class="submit" th:href="@{'/express/' + ${panel.getIdGroup()}}">Отмена</a>
+                        <input type="submit" value="Удалить" class="remove-button" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

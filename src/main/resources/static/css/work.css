@@ -1,0 +1,256 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    height: 100%;
+}
+
+body {
+    font-family: "DejaVu Sans Mono", monospace, "Courier New", "Courier", "Arial";
+    background: #f5f5dc url("../img/bkg_elfium.jpg") no-repeat fixed;
+    background-size: 100% 100%;
+}
+
+body, table {
+    font-size: 13px;
+}
+
+hr {
+    border: 1px #000 solid;
+}
+
+h1, h2, h3 {
+    font-size: 26px;
+    font-weight: 600;
+    font-family: "DejaVu Sans Mono", "Courier New", "Courier", "Arial", monospace;
+}
+
+h2 {
+    font-size: 21px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+.top-block {
+    padding: 15px 0 0 0;
+}
+
+div.top-buttons {
+    margin: 0 0 15px 0;
+    text-align: right;
+}
+
+div.top-buttons a,
+div.top-buttons a:hover,
+div.top-buttons a:visited,
+div.top-buttons a:link {
+    padding: 7px;
+    border: 1px #9868f6 solid;
+    text-align: center;
+    background-color: #efefef;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    margin: 3px;
+}
+
+div.top-buttons a:hover {
+    background-color: #fff;
+    color: #30028a;
+}
+
+.page-title {
+    margin: 15px 30px 0 30px;
+    text-shadow:
+            0 0 5px #000,
+            0 0 10px #000,
+            0 0 20px #000,
+            0 0 25px #000,
+            0 0 35px #000,
+            0 0 40px #000;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px 10px 30px;
+}
+
+.panels-block {
+    margin: 0 30px 0 30px;
+}
+
+/**
+    Экспресс панель
+*/
+
+.form-block {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.form-block-inner {
+    width: 800px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+input, textarea, select {
+    width: 93%;
+    padding: 15px;
+    margin: 2px;
+    background-color: #efefef;
+    color: #000;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+
+select {
+    width: auto;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+input[type="submit"],
+a.submit,
+a.submit:hover,
+a.submit:visited,
+a.submit:link {
+    width: auto;
+    border: 1px #ccc solid;
+    border-radius: 3px;
+    font-size: 21px;
+    padding: 15px;
+    background-color: #e4e4e4;
+    color: #30028a;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+a.submit:hover {
+    border: 1px #900 solid;
+    background-color: #fff;
+}
+
+input[type="submit"].remove-button,
+a.remove-button,
+a.remove-button:hover,
+a.remove-button:visited,
+a.remove-button:link {
+    border: 1px #900 solid;
+    color: #900;
+}
+
+input[type="submit"].remove-button:hover,
+a.remove-button:hover {
+    border: 1px #f00 solid;
+    background-color: #fff;
+    color: #f00;
+}
+
+.form-title {
+    font-size: 18px;
+}
+
+a.submit,
+a.submit:hover,
+a.submit:visited,
+a.submit:link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nodisplay {
+    display: none;
+}
+
+.inline-div {
+    padding: 7px 15px 7px 15px;
+    margin: 2px;
+    background-color: #efefef;
+    color: #000;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+
+.inline-block {
+    display: inline-block;
+    padding: 7px 15px 7px 15px;
+    margin: 2px;
+    background-color: #efefef;
+    color: #000;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+
+.inline-title,
+.inline-about {
+    display: inline-block;
+    padding: 5px 15px 5px 15px;
+    margin: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 23px;
+    border-radius: 0;
+    border: 1px  rgba(255, 255, 255, 0.2) solid;
+}
+
+.inline-about {
+    font-size: 16px;
+    padding: 5px;
+}
+
+.absmiddle {
+    vertical-align: middle
+}
+
+.relative {
+    position: relative;
+}
+
+.error-block {
+    display: inline-block;
+    margin: 5px 5px 5px 10px;
+    color: #fa5151;
+}
+
+.uploaded-file,
+.uploaded-file:hover,
+.uploaded-file:visited,
+.uploaded-file:link {
+    color: #97000c;
+    text-decoration: none;
+}
+
+.uploaded-file:visited {
+    color: #67000c;
+}
+
+.uploaded-file:hover {
+    color: #000c97;
+}
+
+a.button,
+a.button:hover,
+a.button:visited,
+a.button:link {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #ff6c00;
+    border: 1px #bf4f01 solid;
+    background-color: #471f00;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+a.button:hover {
+    color: #ffc400;
+    background-color: #000;
+}

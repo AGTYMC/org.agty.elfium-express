@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <th:block th:replace="~{index/head.html::indexHead}"></th:block>
+
+    <link rel="stylesheet" href="/modules/express/css/express.css?v117" data-precedence="next"/>
+    <script src="/modules/express/js/express.js?v117"></script>
+    <script>
+        $(function() {
+            epressInit();
+        });
+    </script>
+</head>
+<body>
+
+<div class="top-block">
+    <!--<div class="top-buttons">
+        <a href="">Экспресс панель</a>
+        <a href="">Доски</a>
+        <a href="">Календарь</a>
+        <a href="">Задачник</a>
+        <a href="">Расписание</a>
+        <a href="">#</a>
+    </div>-->
+
+    <div class="page-title">
+        <h1 th:text="${title}"></h1>
+    </div>
+</div>
+
+<div class="express-page-buttons-bar">
+    <span class="express-page-buttons float-right">
+        <a href="javascript://" class="move-button">move mode</a>
+        <!--<a href="javascript://" class="copy-button">copy mode</a>-->
+    </span>
+
+    <span class="express-page-path">
+        <th:block th:each="path : ${fullPath}"><a class="express-page-path-block" th:group-id="${path.getIdGroup()}" th:href="@{'/express/' + ${path.getIdGroup()}}" th:text="${path.getTitle()}"></a><span class="express-page-path-arrow express-page-path-arrow-right"></span></th:block>
+    </span>
+</div>
+
+<div class="panels-block">
+    <div class="express-panels">
+
+        <a th:if="${isIndex} != true" th:group-id="${nowGroup.getRGroup()}" th:href="@{'/express/' + ${nowGroup.getRGroup()}}" class="express-block directory-up" >
+            <div class="express-dir-up-image"><img src="/modules/express/img/directory-up.png" height="100" align="absmiddle" /></div>
+        </a>
+
+        <div id="expressgroups">
+            <th:block th:each="group : ${groups}">
+                <a th:group-id="${group.idGroup}" th:href="@{'/express/' + ${group.idGroup}}" class="express-block group-block">
+                    <div class="express-block-button">
+                        <div>
+                            <span class="express-del-button" th:onclick="@{'location.href=\'/express/groups/del/' + ${group.idGroup} + '\'; return false;'}">del</span>
+                            <span class="express-edit-button" th:onclick="@{'location.href=\'/express/groups/edit/' + ${group.idGroup} + '\'; return false;'}">edit</span>
+                        </div>
+                    </div>
+                    <div class="express-block-img">
+                        <img src="/modules/express/img/directory.svg" height="100" />
+                    </div>
+
+                    <div class="express-block-title">
+                        <span th:text="${group.title}"></span>
+                    </div>
+                </a>
+            </th:block>
+        </div>
+
+        <a  th:href="@{'/express/groups/' + ${nowGroup.getIdGroup()} + '/add/'}" class="express-block express-panel-add-button express-group-add-button">
+            +
+        </a>
+
+        <div class="clear"></div>
+    </div>
+
+    <div th:if="${noExpress} != true" class="express-panels">
+        <div id="expresspanel">
+            <th:block th:each="panel : ${panels}">
+                <a th:panel-id="${panel.idExpress}" th:href="${panel.isUriType()} ? ${panel.getUri()} : 'javascript://'" class="express-block" th:target="${panel.isUriType()} ? '_blank' : ''">
+                    <div class="express-block-button">
+                        <div>
+                            <span class="express-del-button" th:onclick="@{'location.href=\'/express/del/' + ${panel.idExpress} + '\'; return false;'}">del</span>
+                            <span class="express-edit-button" th:onclick="@{'location.href=\'/express/edit/' + ${panel.idExpress} + '\'; return false;'}">edit</span>
+                        </div>
+                    </div>
+                    <div th:onclick="${panel.isUriType()} ? '' : 'viewPanel(' + ${panel.getIdType()} + ', ' + ${panel.getIdExpress()} + ')'">
+                        <div class="express-block-img">
+                            <img th:src="@{'/modules/express/img/' + ${panel.getIcon()}}" height="100" />
+                        </div>
+                        <div class="express-block-title" th:title="${panel.title}">
+                            <span th:text="${panel.title}"></span>
+                        </div>
+                    </div>
+                </a>
+            </th:block>
+        </div>
+
+        <a th:href="@{'/express/' + ${nowGroup.getIdGroup()} + '/add/'}" class="express-block express-panel-add-button">
+            +
+        </a>
+
+        <div class="clear"></div>
+    </div>
+</div>
+</body>
+</html>

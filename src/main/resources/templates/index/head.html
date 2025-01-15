@@ -1,0 +1,28 @@
+<th:block th:fragment="indexHead">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=800px">
+    <title th:text="@{'AgtyTasks :: ' +  ${title}}"></title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+
+    <script src="/js/jquery-ui-1.10.4/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/jquery-ui-1.10.4/js/jquery-ui.min.js"></script>
+    <link href="/js/jquery-ui-1.10.4/css/elfium2.0/jquery-ui.min.css" rel="stylesheet">
+    <script src="/js/AgtyUtils.js"></script>
+
+    <link rel="stylesheet" href="/css/main.css" data-precedence="next"/>
+    <link rel="stylesheet" href="/css/work.css" data-precedence="next"/>
+
+    <link rel="stylesheet" href="/css/agty-dialog.css" data-precedence="next"/>
+    <script src="/js/agty-dialog.js"></script>
+
+    <link rel="stylesheet" href="/css/agty-full-view.css" data-precedence="next"/>
+    <script src="/js/agty-full-view.js"></script>
+
+    <script src="/js/api.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            AgtyFullView.init('a[data-id="image"], a[data-id="file"]');
+        });
+    </script>
+</th:block>

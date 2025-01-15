@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="~{index/head.html::indexHead}"></th:block>
+    <link rel="stylesheet" href="/modules/express/css/express.css?v116" data-precedence="next"/>
+    <script src="/modules/express/js/express.js?v116"></script>
+</head>
+<body>
+<div class="form-block">
+    <div class="form-block-inner">
+        <form method="post" th:object="${expressGroup}">
+            <h1 class="center" th:text="${title}"></h1>
+            <div class="table tableVertical">
+                <div class="tableTR">
+                    <div class="tableTD0 tableTDwidth150 form-title">Родительская группа</div>
+                    <div class="tableTD0">
+                        <span class="inline-block">
+                            <img src="/modules/express/img/directory.svg" height="25" alt="dir" class="absmiddle" />
+                            <span th:text="${rootGroup.title}"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="tableTR">
+                    <div class="tableTD0 tableTDwidth150 form-title">Наименование</div>
+                    <div class="tableTD0">
+                        <input type="text" th:field="*{title}" />
+                        <span class="error-block"
+                              th:if="${#fields.hasErrors('title')}"
+                              th:errors="*{title}"></span>
+                    </div>
+                </div>
+                <div class="tableTR">
+                    <div class="tableTD0 tableTDwidth150 form-title">Камент</div>
+                    <div class="tableTD0">
+                        <input type="text" th:field="*{comment}" />
+                    </div>
+                </div>
+                <div class="tableTR">
+                    <div class="tableTD0 tableTDwidth150"></div>
+                    <div class="tableTD0 center">
+                        <a class="submit" th:href="@{'/express/' + ${rootGroup.idGroup}}">Отмена</a>
+                        <input type="submit" value="Сохранить" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
